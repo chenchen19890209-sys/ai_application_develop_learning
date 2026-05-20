@@ -2,6 +2,11 @@
 
 > 23 天从零掌握 AI 应用开发 — **零 LangChain，纯原生实现**
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python 3.11+](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/)
+[![Days](https://img.shields.io/badge/课程-23天-green.svg)](#课程结构)
+[![Phase](https://img.shields.io/badge/阶段-5个-orange.svg)](#课程结构)
+
 ## 课程概览
 
 本教程是一套系统的 AI 大模型应用开发学习路径，涵盖 5 个阶段、23 天。从 Python 基础开始，逐步深入到 LLM API 调用、Context Engineering、Agent 系统、MCP 协议、RAG 检索增强生成，最终完成一个完整的 Agent + RAG 融合项目。
