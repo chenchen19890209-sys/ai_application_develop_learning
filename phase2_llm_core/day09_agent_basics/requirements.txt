@@ -1,0 +1,8 @@
+# Day 09: Agent基础 — 从零实现ReAct Agent
+# LLM核心阶段 - Agent基础
+
+# OpenAI兼容SDK
+openai==1.30.1
+
+# 环境变量加载
+python-dotenv==1.0.0

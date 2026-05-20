@@ -1,0 +1,8 @@
+# Day 10: MCP协议 — 工具标准化的未来
+# LLM核心阶段 - MCP协议
+
+# OpenAI兼容SDK（用于MCP Agent中的LLM决策）
+openai==1.30.1
+
+# 环境变量加载
+python-dotenv==1.0.0
