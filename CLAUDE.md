@@ -4,7 +4,7 @@ This file provides guidance to Claude Code when working with code in this reposi
 
 ## Overview
 
-This is a **24-day AI LLM application development tutorial** (5 phases: Python → LLM → Agent → RAG → Capstone). The curriculum emphasizes **native SDK patterns** and **MCP protocol** over framework lock-in (no LangChain dependency).
+This is a **23-day AI LLM application development tutorial** (5 phases: Python → LLM → Agent → RAG → Capstone). The curriculum emphasizes **native SDK patterns** and **MCP protocol** over framework lock-in (no LangChain dependency).
 
 ## Architecture
 
@@ -14,7 +14,7 @@ ai_develop_learning_claude/
 ├── .env.example                 # Environment variable template
 ├── phase1_fundamentals/         # Phase 1: Python basics (5 days)
 ├── phase2_llm_core/             # Phase 2: LLM core capabilities (5 days)
-├── phase3_agent/                # Phase 3: Agent deep dive (6 days)
+├── phase3_agent/                # Phase 3: Agent deep dive (5 days)
 ├── phase4_rag/                  # Phase 4: RAG practice (5 days)
 └── phase5_capstone/             # Phase 5: Capstone project (3 days)
 ```
@@ -22,12 +22,17 @@ ai_develop_learning_claude/
 ## Common Commands
 
 ```bash
-# Install per-day dependencies
-cd phaseX_*/dayXX_*
-pip install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/
+# Install per-day dependencies (from project root)
+pip install -r phase2_llm_core/day06_llm_basics/requirements.txt -i https://mirrors.aliyun.com/pypi/simple/
 
-# Run a specific day's main code
+# Run a day's example (primary entry point for most days)
+python phase4_rag/day16_rag_basics/example.py
+
+# Run a specific module directly
 python phase2_llm_core/day06_llm_basics/first_llm_call.py
+
+# Run Streamlit web UI (Day 23)
+streamlit run phase5_capstone/day23_web_ui_deployment/web_ui.py
 ```
 
 ## Per-day File Structure
@@ -50,12 +55,27 @@ dayXX_主题/
 
 ## Import Pattern for Day Code Files
 
+Most days import from the project root `config.py` using a 3-level ascent:
+
 ```python
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 from config import OPENAI_API_KEY, OPENAI_BASE_URL, OPENAI_MODEL
+```
+
+**Phase 5 cross-day imports**: Day 23 (`agent_service.py`, `web_ui.py`) imports Day 22 modules using both the project root and the Day22 directory:
+
+```python
+_project_root = Path(__file__).parent.parent.parent
+sys.path.insert(0, str(_project_root))
+
+_day22_path = Path(__file__).parent.parent / "day22_rag_agent_fusion"
+sys.path.insert(0, str(_day22_path))
+
+from config import OPENAI_API_KEY, OPENAI_BASE_URL, OPENAI_MODEL
+from agent import ConversationalRAGAgent
 ```
 
 ## Key Technical Constraints
