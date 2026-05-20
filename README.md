@@ -94,15 +94,6 @@ streamlit run phase5_capstone/day23_web_ui_deployment/web_ui.py
 | Web UI | Streamlit | 对话界面 + 来源展示 |
 | 部署 | Docker + Nginx | 容器化 + HTTPS 反向代理 |
 
-## 关键设计原则
-
-1. **协议优于框架** — 用原生 `openai` SDK 和 MCP 协议，不用 LangChain
-2. **Context 优于 Prompt** — Day 7 起教 Context Engineering 而非手写 prompt 咒语
-3. **Agent 优先于 RAG** — Agent 是核心范式，RAG 是 Agent 的检索工具
-4. **精简 RAG** — 5 天覆盖生产实际需要，舍弃学术性变体
-5. **MCP 作为基础设施** — Day 10 即引入，非事后补充
-6. **干中学** — 每个阶段末尾有迷你项目，Day 21-23 完整实战
-
 ## 仓库结构
 
 ```
