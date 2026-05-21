@@ -1,8 +1,8 @@
-# Day 05: 文件处理与数据处理
-# Python基础阶段 - 文件异常正则 + 数据处理
+# Day 05: File Processing and Data Processing
+# Python Fundamentals - File Exception Regex + Data Processing
 
-# 科学计算库，提供高效的数组操作
+# Scientific computing library, provides efficient array operations
 numpy==1.24.3
 
-# 数据分析库，提供DataFrame等数据结构
+# Data analysis library, provides DataFrame and other data structures
 pandas==2.0.3

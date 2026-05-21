@@ -1,11 +1,11 @@
-# Day 07: Context Engineering — 上下文工程
-# LLM核心阶段 - 上下文设计
+# Day 07: Context Engineering
+# LLM Core Stage - Context Design
 
-# OpenAI兼容SDK
+# OpenAI compatible SDK
 openai==1.30.1
 
-# 环境变量加载
+# Environment variable loading
 python-dotenv==1.0.0
 
-# 精确计算token数（比估算更准）
+# Accurate token counting (more precise than estimation)
 tiktoken==0.7.0

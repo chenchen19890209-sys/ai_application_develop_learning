@@ -1,8 +1,8 @@
-# Day 09: Agent基础 — 从零实现ReAct Agent
-# LLM核心阶段 - Agent基础
+# Day 09: Agent Basics - Implement ReAct Agent from Scratch
+# LLM Core Stage - Agent Basics
 
-# OpenAI兼容SDK
+# OpenAI compatible SDK
 openai==1.30.1
 
-# 环境变量加载
+# Environment variable loading
 python-dotenv==1.0.0

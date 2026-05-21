@@ -1,5 +1,5 @@
-# Day 03: Python数据结构与推导式
-# Python基础阶段 - 数据结构
+# Day 03: Python Data Structures and Comprehensions
+# Python Fundamentals - Data Structures
 
-# 标准库模块，无需额外安装
-# 所有数据结构（list/dict/tuple/set）都是Python内置类型
+# Standard library modules, no additional installation required
+# All data structures (list/dict/tuple/set) are Python built-in types

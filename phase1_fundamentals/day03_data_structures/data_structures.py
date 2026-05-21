@@ -261,7 +261,7 @@ def demo_comprehensions():
     print(f"\n字典推导式 — 平方映射: {squares_dict}")
 
     # 过滤字典
-    scores = {"张三": 85, "李四": 92, "王五": 78, "赵六": 95}
+    scores = {"张三": 78, "李四": 92, "王五": 78, "赵六": 95}
     top_students = {k: v for k, v in scores.items() if v >= 90}
     print(f"优秀学生: {top_students}")
 

@@ -1,8 +1,8 @@
-# Day 08: Function Calling — 让LLM使用工具
-# LLM核心阶段 - 函数调用
+# Day 08: Function Calling - Enable LLM to Use Tools
+# LLM Core Stage - Function Calling
 
-# OpenAI兼容SDK
+# OpenAI compatible SDK
 openai==1.30.1
 
-# 环境变量加载
+# Environment variable loading
 python-dotenv==1.0.0

@@ -1,5 +1,5 @@
-# Day 02: Python控制流程
-# Python基础阶段 - 控制流程
+# Day 02: Python Control Flow
+# Python Fundamentals - Control Flow
 
-# 标准库模块，无需额外安装
-# - random: 用于猜数字游戏
+# Standard library modules, no additional installation required
+# - random: for number guessing game
