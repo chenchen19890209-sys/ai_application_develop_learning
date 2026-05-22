@@ -134,6 +134,11 @@ def demo_type_hints():
                 return s
         return None  # Optional允许返回None
 
+    students: List[Dict] = [
+        {"name": "张三", "age": 20, "score": 85},
+        {"name": "李四", "age": 21, "score": 92},
+        {"name": "王五", "age": 22, "score": 78}
+    ]
     result = find_student("李四", students)
     print(f"查找结果: {result['name'] if result else '未找到'}")
 
