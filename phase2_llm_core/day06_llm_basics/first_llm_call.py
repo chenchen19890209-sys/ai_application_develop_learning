@@ -141,7 +141,7 @@ def demo_streaming(prompt: str):
     # 逐块接收并打印
     for chunk in stream:
         # 每个chunk包含一小段生成的文字（delta）
-        if chunk.choices[0].delta.content is not None:
+        if chunk.choices and chunk.choices[0].delta.content is not None:
             print(chunk.choices[0].delta.content, end="", flush=True)  # 逐字打印
 
     print()  # 最后换行
@@ -181,10 +181,11 @@ def demo_multi_turn():
             max_tokens=256
         )
 
-        answer = response.choices[0].message.content
+        answer = response.choices[0].message.content if response.choices else "（无回复）"
 
         # 添加AI回复到历史中
-        messages.append({"role": "assistant", "content": answer})
+        if response.choices:
+            messages.append({"role": "assistant", "content": answer})
 
         print(f"\n👤: {q}")
         print(f"🤖: {answer}")
@@ -205,6 +206,12 @@ def demo_parameters():
     prompt = "请用一句话介绍Python编程语言"
 
     # 对比不同temperature
+    print("\n💡 Temperature 参数说明：")
+    print("   0.1-0.3: 非常保守、确定性高")
+    print("   0.5-0.7: 平衡、自然流畅（推荐）")
+    print("   0.8-1.0: 更有创意、多样化")
+    print("   >1.2: 可能产生混乱或无意义的输出\n")
+    
     for temp in [0.1, 0.7, 1.5]:
         response = client.chat.completions.create(
             model=OPENAI_MODEL,

@@ -230,8 +230,7 @@ def demo_decorators():
             if args not in cache:
                 cache[args] = func(*args)  # 首次计算并缓存
                 print(f"  计算 {args} = {cache[args]}（已缓存）")
-            else:
-                print(f"  命中缓存 {args} = {cache[args]}")
+            else:                print(f"  命中缓存 {args} = {cache[args]}")
             return cache[args]
 
         return wrapper

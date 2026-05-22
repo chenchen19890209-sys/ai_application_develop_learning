@@ -309,6 +309,7 @@ def demo_data_cleaning_pipeline():
             parts = [p.strip() for p in line.split(",")]
 
             if len(parts) != 3:
+                # raise 用于主动抛出异常，中断当前流程并跳转到 except 块
                 raise ValueError(f"列数不对(期望3列，实际{len(parts)}列)")
 
             name, score_str, email = parts
